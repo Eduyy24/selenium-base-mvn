@@ -4,7 +4,7 @@ import cucumber.api.CucumberOptions;
 
 
 @RunWith(CucumberWithSerenity.class)
-@CucumberOptions(features = "src/test/resources/features/login/login.feature", tags="@Caso:1")
+@CucumberOptions(features = "src/test/resources/features/elements.feature", tags="@Caso1")
 
 
 public class RunnerFeature {

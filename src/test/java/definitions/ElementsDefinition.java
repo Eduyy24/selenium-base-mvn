@@ -12,11 +12,12 @@ public class ElementsDefinition {
     @Given("^Ingreso a la pagina principal$")
     public void ingreso_a_la_pagina_principal() {
         homeSteps.goToInitialPage();
+
     }
 
     @When("^Ingreso al modulo de elements$")
     public void ingreso_al_modulo_de_elements() {
-
+        homeSteps.goToElements();
     }
 
     @Then("^Valido el ingreso exitoso al modulo element$")
