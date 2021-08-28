@@ -7,10 +7,15 @@ import utils.UtilsElement;
 
 @DefaultUrl("https://demoqa.com/elements")
 public class ElementsPage extends UtilsElement {
-    public String lblTitlePage = "//*[@class='main-header']";
+    private String lblTitlePage = "//*[@class='main-header']";
+    private String sectionTextBox = "//*[@class='accordion']/div[1]/div/ul/li[1]";
 
     public String getTextLabelPage() {
         return getTextElements(lblTitlePage);
+    }
+
+    public void clickSectionTextBox() {
+        click(sectionTextBox);
     }
 
 }

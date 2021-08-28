@@ -17,4 +17,9 @@ public class ElementsSteps {
        String textLabel = elementsPage.getTextLabelPage();
        assertThat(textLabel, equalTo(titlePage));
     }
+
+    @Step
+    public void goToSectionTexBox() {
+        elementsPage.clickSectionTextBox();
+    }
 }
