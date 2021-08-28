@@ -28,7 +28,6 @@ public class UtilsElement extends PageObject {
         setHighLine(element);
         String text = element.getText();
         removeHighLine(element);
-
         return text;
     }
 

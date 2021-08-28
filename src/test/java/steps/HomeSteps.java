@@ -14,7 +14,7 @@ public class HomeSteps {
 
     @Step
     public void goToElements() {
-        homePage.click(homePage.elementsButton);
+        homePage.clickInElements();
     }
 
 }
