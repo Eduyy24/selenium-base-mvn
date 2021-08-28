@@ -2,6 +2,7 @@ package steps;
 
 import net.thucydides.core.annotations.Step;
 import pages.HomePage;
+import utils.UtilsElement;
 
 public class HomeSteps {
     HomePage homePage;
@@ -13,7 +14,7 @@ public class HomeSteps {
 
     @Step
     public void goToElements() {
-        homePage.click(HomePage.elementsButton);
+        homePage.click(homePage.elementsButton);
     }
 
 }

@@ -3,11 +3,15 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.thucydides.core.annotations.Steps;
+import steps.ElementsSteps;
 import steps.HomeSteps;
 
 public class ElementsDefinition {
     @Steps
     HomeSteps homeSteps;
+
+    @Steps
+    ElementsSteps elementsSteps;
 
     @Given("^Ingreso a la pagina principal$")
     public void ingreso_a_la_pagina_principal() {
@@ -22,6 +26,6 @@ public class ElementsDefinition {
 
     @Then("^Valido el ingreso exitoso al modulo element$")
     public void valido_el_ingreso_exitoso_al_modulo_element() {
-
+        elementsSteps.validateLabel();
     }
 }
