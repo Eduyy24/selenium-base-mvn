@@ -10,6 +10,7 @@ public class HomeSteps {
     @Step
     public void goToInitialPage() {
         homePage.open();
+        homePage.maximizeWindow();
     }
 
     @Step

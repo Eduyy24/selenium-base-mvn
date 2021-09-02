@@ -13,4 +13,7 @@ public class HomePage extends UtilsElement {
           click(elementsButton);
      }
 
+     public void maximizeWindow() {
+          getDriver().manage().window().maximize();
+     }
 }

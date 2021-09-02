@@ -24,10 +24,11 @@ public class TextBoxDefinition {
     @When("^Diligencio el campo Full name$")
     public void diligencio_el_campo_Full_name() {
         textBoxSteps.setInputName();
+        textBoxSteps.submitForm();
     }
 
     @Then("^Valido el envio exitoso del campo Full name$")
     public void valido_el_envio_exitoso_del_campo_Full_name() {
-
+        textBoxSteps.validateFieldName();
     }
 }

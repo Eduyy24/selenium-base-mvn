@@ -5,10 +5,20 @@ import org.openqa.selenium.By;
 import utils.UtilsElement;
 
 public class TextBoxPage extends UtilsElement {
-    private String inputName = "userName";
+    private String inputNameXpath = "//*[@id='userName']";
+    private String btnSubmitXpath = "//*[@id='submit']";
+    private String lblNameSubmitXpath = "//*[@id='name']";
 
     public void setInputName(String input) {
-        WebElementFacade element = element(By.id(inputName));
-        element.type(input);
+        typeInput(inputNameXpath, input);
+    }
+
+    public void clickBtnSubmit() {
+        scrollForPixel("300");
+        click(btnSubmitXpath);
+    }
+
+    public String getTextLabelName(){
+        return getTextElements(lblNameSubmitXpath);
     }
 }
