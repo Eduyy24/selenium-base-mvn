@@ -8,10 +8,15 @@ public class TextBoxPage extends UtilsElement {
     private String inputNameXpath = "//*[@id='userName']";
     private String btnSubmitXpath = "//*[@id='submit']";
     private String lblNameSubmitXpath = "//*[@id='name']";
+    private String inputEmail = "//*[@id='userEmail']";
+    private String lblEmailSubmit = "//*[@id='email']";
+
 
     public void setInputName(String input) {
         typeInput(inputNameXpath, input);
     }
+
+    public void setInputEmail(String input) {typeInput(inputEmail, input);}
 
     public void clickBtnSubmit() {
         scrollForPixel("300");
@@ -20,5 +25,13 @@ public class TextBoxPage extends UtilsElement {
 
     public String getTextLabelName(){
         return getTextElements(lblNameSubmitXpath);
+    }
+
+    public WebElementFacade getLblEmailSubmit() {
+        return $(lblEmailSubmit);
+    }
+
+    public String getTextLblEmail() {
+        return getTextElements(lblEmailSubmit);
     }
 }
