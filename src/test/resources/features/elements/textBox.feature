@@ -26,3 +26,17 @@ Feature: Text Box
     When Diligencio el campo Email con "example@example.com"
     Then Se realiza correctamente el submit con la información ingresada
 
+
+  @Caso4
+  Scenario Outline: Diligenciamiento exitoso del formulario Text Box
+    Given Ingreso a la pagina principal
+    And Ingreso al modulo de elements
+    And Ingreso a la secion de Text Box
+    When Diligencio el formulario con: <name>, <email>, <c_address>, <p_address>
+    Then Envio exitoso de los datos del formulario
+
+    Examples:
+    | name      | email             | c_address   | p_address       |
+    | "Eduardo" | "Edu@edu.com"     | ""          | ""              |
+    | "Luis"    | "Hola@gmail.com"  | "no tengo"  | "mucho nmenos"  |
+

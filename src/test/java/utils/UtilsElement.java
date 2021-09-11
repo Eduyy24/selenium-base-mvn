@@ -18,23 +18,20 @@ public class UtilsElement extends PageObject {
         j.executeScript ("arguments[0].style.border='none';",element);
     }
 
-    public void click (String xpath) {
-        WebElementFacade element = element(By.xpath(xpath));
+    public void click (WebElementFacade element) {
         setHighLine(element);
         element.waitUntilClickable();
         element.click();
     }
 
-    public String getTextElements(String xpath){
-        WebElementFacade element = element(org.openqa.selenium.By.xpath(xpath));
+    public String getTextElements(WebElementFacade element){
         setHighLine(element);
         String text = element.getText();
         removeHighLine(element);
         return text;
     }
 
-    public void typeInput(String xpath, String input) {
-        WebElementFacade element = element(xpath);
+    public void typeInput(WebElementFacade element, String input) {
         setHighLine(element);
         element.type(input);
         removeHighLine(element);

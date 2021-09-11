@@ -11,11 +11,11 @@ public class ElementsPage extends UtilsElement {
     private String sectionTextBox = "//*[@class='accordion']/div[1]/div/ul/li[1]";
 
     public String getTextLabelPage() {
-        return getTextElements(lblTitlePage);
+        return getTextElements($(lblTitlePage));
     }
 
     public void clickSectionTextBox() {
-        click(sectionTextBox);
+        click($(sectionTextBox));
     }
 
 }

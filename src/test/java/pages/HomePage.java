@@ -10,7 +10,7 @@ public class HomePage extends UtilsElement {
      private final String elementsButton = "//*[@class='category-cards']/div[1]";
 
      public void clickInElements() {
-          click(elementsButton);
+          click($(elementsButton));
      }
 
      public void maximizeWindow() {

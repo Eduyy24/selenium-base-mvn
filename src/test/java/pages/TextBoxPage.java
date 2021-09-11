@@ -2,36 +2,56 @@ package pages;
 
 import net.serenitybdd.core.pages.WebElementFacade;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.FindBy;
 import utils.UtilsElement;
 
 public class TextBoxPage extends UtilsElement {
-    private String inputNameXpath = "//*[@id='userName']";
+    //inputs
+    private String iptNameXpath = "//*[@id='userName']";
+    private String iptEmail = "//*[@id='userEmail']";
+    private String iptCAddress = "//*[@id='currentAddress']";
+    private String iptPAddress = "//*[@id='permanentAddress']";
+
+
+    //buttons
     private String btnSubmitXpath = "//*[@id='submit']";
+
+    //labels
     private String lblNameSubmitXpath = "//*[@id='name']";
-    private String inputEmail = "//*[@id='userEmail']";
     private String lblEmailSubmit = "//*[@id='email']";
 
+    /*@FindBy(xpath = "//*[@id='email']")
+    private WebElementFacade lblEmailSubmitV2;
 
-    public void setInputName(String input) {
-        typeInput(inputNameXpath, input);
+    public WebElementFacade getLblEmailSubmitV2(){
+        return  lblEmailSubmitV2;
+    }*/
+
+    public WebElementFacade getIptNameElement() {
+        return element(By.xpath(iptNameXpath));
     }
 
-    public void setInputEmail(String input) {typeInput(inputEmail, input);}
-
-    public void clickBtnSubmit() {
-        scrollForPixel("300");
-        click(btnSubmitXpath);
+    public WebElementFacade getBtnSubmitElement() {
+        return $(btnSubmitXpath);
     }
 
-    public String getTextLabelName(){
-        return getTextElements(lblNameSubmitXpath);
+    public WebElementFacade getLblNameElement() {
+        return $(lblNameSubmitXpath);
     }
 
-    public WebElementFacade getLblEmailSubmit() {
+    public WebElementFacade getIptEmailElement() {
+        return $(iptEmail);
+    }
+
+    public WebElementFacade getlblEmailElement() {
         return $(lblEmailSubmit);
     }
 
-    public String getTextLblEmail() {
-        return getTextElements(lblEmailSubmit);
+    public WebElementFacade getIptCAddressElement() {
+        return $(iptCAddress);
+    }
+
+    public WebElementFacade getIptPAdressElement() {
+        return $(iptPAddress);
     }
 }

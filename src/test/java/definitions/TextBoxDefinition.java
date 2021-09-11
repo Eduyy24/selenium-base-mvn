@@ -24,7 +24,7 @@ public class TextBoxDefinition {
 
     @When("^Diligencio el campo Full name$")
     public void diligencio_el_campo_Full_name() {
-        textBoxSteps.setInputName();
+        textBoxSteps.setInputName("Eduardo");
         textBoxSteps.submitForm();
     }
 
@@ -48,5 +48,20 @@ public class TextBoxDefinition {
     public void se_realiza_correctamente_el_submit_con_la_información_ingresada() {
         textBoxSteps.validateFieldEmail(true);
         textBoxSteps.validateContentEmail();
+    }
+
+    @When("^Diligencio el formulario con: \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\"$")
+    public void diligencio_el_formulario_con(String name, String email, String cAddress, String pAddress) {
+        textBoxSteps.setInputName(name);
+        textBoxSteps.setInputEmail(email);
+        textBoxSteps.setInpCAdress(cAddress);
+        textBoxSteps.setInpPAdress(pAddress);
+        textBoxSteps.submitForm();
+    }
+
+
+    @Then("^Envio exitoso de los datos del formulario$")
+    public void envio_exitoso_de_los_datos_del_formulario() {
+
     }
 }
