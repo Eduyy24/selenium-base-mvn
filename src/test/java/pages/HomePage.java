@@ -10,6 +10,7 @@ public class HomePage extends UtilsElement {
      private final String elementsButton = "//*[@class='category-cards']/div[1]";
 
      public void clickInElements() {
+          scrollForPixel("200");
           click(elementsButton);
      }
 
