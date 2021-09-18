@@ -17,12 +17,17 @@ public class ElementsSteps {
     public void validateLabel() {
         WebElementFacade lblTilte = elementsPage.getLblTitlePageElement();
         String textLabel = elementsPage.getTextElements(lblTilte);
-        assertThat(textLabel, equalTo(titlePage));
     }
 
     @Step
     public void goToSectionTexBox() {
         WebElementFacade btnTextBox = elementsPage.getSectionTextBoxElement();
         elementsPage.click(btnTextBox);
+    }
+
+    @Step
+    public void goToSection(String section) {
+        WebElementFacade btnElement = elementsPage.getSectionElement(section);
+        elementsPage.click(btnElement);
     }
 }

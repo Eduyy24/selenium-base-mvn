@@ -18,4 +18,16 @@ public class ElementsPage extends UtilsElement {
         return $(sectionTextBox);
     }
 
+    public WebElementFacade getSectionElement(String section) {
+        //*[@class='accordion']/div[1]/div/ul/li/span[text()='Web Tables']
+        return element(By.xpath("//*[@class='accordion']/div[1]/div/ul/li/span[text()='" + section + "']"));
+    }
+
+    /**
+     * String a = "hola"
+     * String b = "Eduardo"
+     * String c = a + b => holaEduardo
+     * String c = a + " " + b => hola Eduardo
+     */
+
 }
