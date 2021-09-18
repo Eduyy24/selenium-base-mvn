@@ -9,11 +9,8 @@ import utils.UtilsElement;
 public class HomePage extends UtilsElement {
      private final String elementsButton = "//*[@class='category-cards']/div[1]";
 
-     public void clickInElements() {
-          click($(elementsButton));
+     public WebElementFacade getBtnElement() {
+          return $(elementsButton);
      }
 
-     public void maximizeWindow() {
-          getDriver().manage().window().maximize();
-     }
 }

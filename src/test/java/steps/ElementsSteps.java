@@ -1,5 +1,6 @@
 package steps;
 
+import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.Step;
 import pages.ElementsPage;
 
@@ -14,12 +15,14 @@ public class ElementsSteps {
 
     @Step
     public void validateLabel() {
-       String textLabel = elementsPage.getTextLabelPage();
-       assertThat(textLabel, equalTo(titlePage));
+        WebElementFacade lblTilte = elementsPage.getLblTitlePageElement();
+        String textLabel = elementsPage.getTextElements(lblTilte);
+        assertThat(textLabel, equalTo(titlePage));
     }
 
     @Step
     public void goToSectionTexBox() {
-        elementsPage.clickSectionTextBox();
+        WebElementFacade btnTextBox = elementsPage.getSectionTextBoxElement();
+        elementsPage.click(btnTextBox);
     }
 }

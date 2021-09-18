@@ -10,12 +10,12 @@ public class ElementsPage extends UtilsElement {
     private String lblTitlePage = "//*[@class='main-header']";
     private String sectionTextBox = "//*[@class='accordion']/div[1]/div/ul/li[1]";
 
-    public String getTextLabelPage() {
-        return getTextElements($(lblTitlePage));
+    public WebElementFacade getLblTitlePageElement() {
+        return $(lblTitlePage);
     }
 
-    public void clickSectionTextBox() {
-        click($(sectionTextBox));
+    public WebElementFacade getSectionTextBoxElement() {
+        return $(sectionTextBox);
     }
 
 }

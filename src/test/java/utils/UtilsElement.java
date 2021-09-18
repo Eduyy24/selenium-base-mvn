@@ -42,4 +42,8 @@ public class UtilsElement extends PageObject {
         j.executeScript("window.scrollBy(0,"+pixels+")");
     }
 
+    public void maximizeWindow() {
+        getDriver().manage().window().maximize();
+    }
+
 }
