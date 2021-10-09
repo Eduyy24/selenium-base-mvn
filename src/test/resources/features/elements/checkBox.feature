@@ -18,8 +18,8 @@ Feature: Check Box
     Given Ingreso a la pagina principal
     And Ingreso al modulo de elements
     And Ingreso a la seccion de "Check Box"
-    When Selecciono la opción en la ruta "Home/Documents/Office"
+    When Selecciono la opción en la ruta "Home/Downolads"
       |   Classified  |
       |   Private     |
       |   Public      |
-    Then Valido la seleción para "Classified"
+    Then Valido el mensaje de seleción de opciones
