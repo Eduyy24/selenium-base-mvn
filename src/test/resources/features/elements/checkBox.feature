@@ -12,3 +12,14 @@ Feature: Check Box
     |   Desktop    |
     |   Documents  |
     |   Downloads  |
+
+  @Caso2
+  Scenario: Selecionar la opción Classified en Home/Documents/Office
+    Given Ingreso a la pagina principal
+    And Ingreso al modulo de elements
+    And Ingreso a la seccion de "Check Box"
+    When Selecciono la opción en la ruta "Home/Documents/Office"
+      |   Classified  |
+      |   Private     |
+      |   Public      |
+    Then Valido la seleción para "Classified"
